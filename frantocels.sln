@@ -1,25 +1,24 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frantocels", "frantocels\frantocels.csproj", "{983D6C7D-6F34-4D1F-80B0-748B36E924EF}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{983D6C7D-6F34-4D1F-80B0-748B36E924EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{983D6C7D-6F34-4D1F-80B0-748B36E924EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{983D6C7D-6F34-4D1F-80B0-748B36E924EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{983D6C7D-6F34-4D1F-80B0-748B36E924EF}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C69FE01C-C41C-4597-9C7C-B61A0C26A3FC}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using frantocels.ServiceReference1;
+
+namespace frantocels
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            frantocelsClient client = new frantocelsClient();
+            Console.WriteLine("Enter the franheit");
+            double f = double.Parse(Console.ReadLine());
+            Console.WriteLine(client.fahrenheitToCelsius(f));
+            Console.WriteLine("Enter any key to exit");
+            Console.ReadKey();
+            Console.ReadLine();
+
+        }
+    }
+}
